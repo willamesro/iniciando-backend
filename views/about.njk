@@ -1,0 +1,17 @@
+{% extends "layout.njk" %}
+ {% block content %}
+<div id="wrapper">
+    <img src="{{info.avatar_url}} " alt="Image de {{info.name}}">
+    <h1>{{info.name}} </h1>
+    <h2>{{info.role}} </h2>
+    <p>{{info.description}}</p>
+</div>
+<div id="links" class="menu ">
+    {% for link in info.links %}
+    <a href="{{link.url}}">{{link.name}}</a>
+    {% endfor %}
+
+   
+</div>
+
+{% endblock %}
